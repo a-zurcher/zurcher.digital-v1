@@ -1,0 +1,24 @@
+RewriteEngine on
+
+# https redirect
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule (.*) https://zurcher.digital/$1 [R=301,L]
+
+# French
+RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+RewriteCond %{HTTP_HOST} !^(www\.)zurcher.digital/fr$ [NC]
+RewriteRule ^$ https://zurcher.digital/fr [R,L,NC]
+
+RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+RewriteCond %{HTTP_HOST} !^(www\.)?v1\.zurcher\.digital\.fr$ [NC]
+RewriteRule ^$ http://zurcher.digital/fr [R,L,NC]
+
+
+# English
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteCond %{HTTP_HOST} !^(www\.)?v1\.zurcher\.digital\.en$ [NC]
+RewriteRule ^$ http://zurcher.digital/en [R,L,NC]
+
+# All other languages
+RewriteCond %{HTTP_HOST} !^(www\.)v1\.zurcher\.digital$ [NC]
+RewriteRule ^$ https://zurcher.digital/en [R,L]
