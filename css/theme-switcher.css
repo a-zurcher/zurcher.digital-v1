@@ -1,0 +1,43 @@
+#theme-switcher:checked ~ * {
+  --color-text: #68615e;
+  --color-selection-background: #a8a19f;  
+  --color-background: #f1efee;
+
+  --red:#dc7374;
+  --green:#86bc59;
+  --yellow:#d5911a;
+  --blue:#407ee7;
+  --violet:#b58aac;
+  --aqua:#00ad9c;
+}
+
+
+.theme-switcher-button {
+  position: fixed;
+  cursor: pointer;
+  white-space: normal;
+  bottom: 1.5rem;
+}
+
+.theme-switcher-button:hover{
+  text-decoration: underline;
+}
+
+/* french */
+#theme-switcher.fr:checked ~ .theme-switcher-button::after {
+  content:"<changer vers thème sombre>";
+}
+
+#theme-switcher.fr:not(:checked) ~ .theme-switcher-button::after {
+  content:"<changer vers thème clair>";
+}
+
+
+/* english */
+#theme-switcher.en:checked ~ .theme-switcher-button::after {
+  content:"<switch to dark theme>";
+}
+
+#theme-switcher.en:not(:checked) ~ .theme-switcher-button::after {
+  content:"<switch to light theme>";
+}

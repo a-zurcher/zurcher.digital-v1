@@ -1,0 +1,66 @@
+#pop-up-switcher ~ div.pop-up {
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;
+    padding: .75rem;
+    
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 18rem;
+    height: 21rem;
+    
+    z-index: 1;
+    
+    box-shadow: .2rem .2rem 0 var(--aqua);
+    user-select: none;
+    
+    opacity: 0;
+    transition: var(--transition-fast);
+    background: var(--green);
+}
+
+#pop-up-switcher:checked ~ div.pop-up {
+    opacity: 1!important;
+    visibility: visible;
+}
+
+div.pop-up * {
+    transition: var(--transition-fast);
+}
+
+div.pop-up p.pop-up-title {
+    position: absolute;
+    margin-top: -3.5%;
+    z-index: 100;
+    margin-left: 3%;
+}
+
+div.pop-up img {
+    position: relative;
+    left: 0; right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    user-select: none;
+    
+    transition: border var(--transition-fast);
+    border: solid 2px var(--color-background);
+}
+
+div.pop-up a{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; right: 0;
+    animation: none;
+    z-index: 10;
+    user-select: none;
+}

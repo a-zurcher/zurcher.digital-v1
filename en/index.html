@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Alexandre Zürcher</title>
+    <meta name="description" content="Alexandre Zürcher's personal site">
+    <meta name="author" content="Alexandre Zürcher">
+
+    <link rel="stylesheet" href="/style.min.css">
+</head>
+
+<body>
+
+<!-- theme switcher -->
+<input type="checkbox" id="theme-switcher" class="en" style="display:none;">
+<label for="theme-switcher" class="theme-switcher-button aqua"><span></span></label>
+
+
+<!-- language switcher -->
+<nav class="menu">
+    <p class="bg-blue">en</p>
+    <a class="blue" href="/fr">fr</a>
+</nav>
+
+
+<!-- main content -->
+<div class="content">
+    <p>Hello, my name is <label for="pop-up-switcher" class="pop-up-button"><a class="green">Alexandre Zürcher</a></label>.</p>
+    
+    <p>I'm currently pursuing a Bachelor in <span class="bg-red">Business Information System</span> at Geneva's <a class="red" href="https://www.hesge.ch/heg/en/core-programmes/bachelors-science/business-information-systems" target="_blank" rel="noreferrer noopener">HEG</a>.</p>
+    
+    <p>Until recently, I was also working at <a class="blue" href="https://www.infomaniak.com/">Infomaniak</a> as Support Agent, but decided to resign in order to focus on my studies and personal projects.</p>
+    
+    <p>At the moment, I am not looking for professional opportunities, only <span class="bg-violet">vacations</span>.</p>
+    
+    <p>You can reach me via <a class="yellow" href="mailto:alexandre@zurcher.digital">email</a> and on <a class="green" href="https://www.linkedin.com/in/alexandre-zurcher/" target="_blank" rel="noreferrer noopener">LinkedIn</a>.</p>
+
+</div>
+
+<!-- pop-up -->
+<input type="checkbox" id="pop-up-switcher" style="display:none;">
+<div class="pop-up" style="opacity:0;">
+    <p class="pop-up-title bg-green">alex.png</p>
+    <img src="/ressources/alex.png" draggable="false">
+    <label for="pop-up-switcher" class="pop-up-button on">
+        <a class="bg-green" style="animation: none;">&lt;close&gt;</a>
+    </label>
+</div>
+
+<div class="background"></div>
+
+</body>
+</html>

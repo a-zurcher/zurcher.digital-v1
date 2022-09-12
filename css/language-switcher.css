@@ -1,0 +1,8 @@
+.en, .fr {
+  display: none;
+}
+
+/* show those elements that match their language class */
+.en:lang(en), .de:lang(de), .it:lang(it) {
+  display:block;
+}
